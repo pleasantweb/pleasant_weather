@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Nanum+Myeongjo&family=Noto+Serif+JP:wght@200&family=Yomogi&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$mobile : 500px;
+@mixin mobile {
+   @media (max-width:#{$mobile}) {
+       @content;
+   }    
+}
+.homeContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: #058fb2;
+    overflow: hidden;
+    .upperbody{
+        width: inherit;
+        height: 50vh;
+        text-align: center;
+        color: white;
+        
+        .content{
+            width:inherit;
+            height: inherit;    
+            margin:  auto;
+            display: grid;
+            grid-template-rows: 30% 70% ;
+            align-items: flex-end;
+            @include mobile(){
+                align-items: center;
+            }
+            .cityAndDate{
+                grid-row: 1;
+                
+                display: flex;
+                justify-content: space-between;
+                padding: 0 3% 0 5%;
+                .city{
+                    h4{
+                        font-family: 'Yomogi', cursive;
+                        font-size: 2.1rem;
+                        font-weight: 100;
+                        text-transform: capitalize;
+                     
+                    }
+                 }
+                 .date{     
+                     @include mobile(){
+                        display: flex;
+                        align-items: center;
+                     } 
+                     
+                     h2{
+                        // font-family: 'Yomogi', cursive;
+                        font-family: 'Nanum Myeongjo', serif;
+                         font-size: 1.7rem;
+                         font-weight: 100;
+
+                     }
+                 }
+            }
+            .tmpFeel{
+                grid-row: 2;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                @include mobile(){
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .iconshow{
+                 display: flex;
+                 align-items: center;
+                width: 13%;
+                svg{
+                    font-size: 3.8rem;
+                   
+                }}
+                .teempfeel{
+                    width: 40%;
+                    text-align: center;
+                   
+                .temperature{       
+                   display: flex;
+                   justify-content: center;
+                    h1{          
+                    font-size: 5.8rem;
+                       
+                        }
+                        span{
+                            font-size: 5.1rem;
+                            font-weight: 100;
+                            @include mobile(){
+                                font-size: 4.3rem;
+                                padding-top: 10px;
+                            }
+                    }
+                }
+                .feeling{
+                    //width: 70%;
+            text-align: center;
+                    h4{
+                        text-transform: uppercase;
+                        //font-family: 'Noto Serif JP', serif;
+                        font-family: 'Yomogi', cursive;
+                        font-weight: 100;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+            .dayname{
+               // margin-right: 5%;
+                h3{
+                    font-family: 'Yomogi', cursive ;
+                    font-size: 1.8rem;
+                }
+            }
+            }
+            }    
+    }
+    .lowerbody{
+        width: inherit;
+        height: 50vh;
+       
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        .moreDetails{
+           height: 50%;
+            padding-left: 10%;
+            padding-right: 10%;
+            display: flex;
+            justify-content: space-between;
+            @include mobile(){
+                padding-left: 4%;
+                padding-right: 8%;
+            }
+            .sunrise,.sunset{
+                display: flex;
+                align-items: center;
+                width: 20%;
+                p{
+                   //width: 50%;
+                    height: 20%;
+                    transform: rotate(270deg);
+                }
+                .timeandicon{
+                    svg{
+                        font-size: 2.4rem;
+                    }
+                }
+               
+            }
+            .sunset{
+                p{
+                    transform: rotate(90deg);
+                }
+            }
+            .wind{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .timeandiconn{
+                    display: flex;
+                    flex-direction: row;
+                p{
+                    transform: rotate(0deg);
+                    
+                }
+                svg{
+                    font-size: 2.4rem;
+                }
+            }
+           
+            }
+        }
+        .moreInfo{
+            height: 50%;
+            padding-left: 5%;
+            padding-right: 5%;
+            display: flex;
+            align-items: center;
+            .feelsLike{
+                width: 40%;
+                h4{
+                    font-size: 1.6rem;
+                    font-family: 'Yomogi', cursive;
+                }
+            }
+            .SearchCity{
+                width: 60%;
+               
+            //    form{
+                display: flex;
+                justify-content: center;
+               .searchInput{
+                   width: 60%;
+                   height: 35px;
+                   border: 1px solid white;
+                   outline: none;
+                   background: none;
+                   border-radius: 16px;
+                   color: white;
+                   font-size: 1.4rem;
+                   padding-left: 12px;
+                   font-family: 'Yomogi', cursive;
+                   text-transform: capitalize;
+                   @include mobile(){
+                       width: 80%;
+                   }
+               }
+               .searchInput::placeholder{
+                   color: white;
+                   font-family: 'Montserrat', sans-serif;
+               }
+               :-ms-input-placeholder{
+                   color: white;
+                   font-family: 'Montserrat', sans-serif;
+               }
+               .searchBtn{
+                   font-size: 2.2rem;
+                   margin-left: 8px;
+                   cursor: pointer;
+                   
+               }
+            // }
+            }
+        }
+       
+    }
+}

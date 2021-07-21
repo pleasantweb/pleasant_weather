@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Nanum+Myeongjo&family=Noto+Serif+JP:wght@200&family=Yomogi&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.homeContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #058fb2;
+  overflow: hidden;
+}
+
+.homeContainer .upperbody {
+  width: inherit;
+  height: 50vh;
+  text-align: center;
+  color: white;
+}
+
+.homeContainer .upperbody .content {
+  width: inherit;
+  height: inherit;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 30% 70%;
+      grid-template-rows: 30% 70%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.homeContainer .upperbody .content .cityAndDate {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 3% 0 5%;
+}
+
+.homeContainer .upperbody .content .cityAndDate .city h4 {
+  font-family: 'Yomogi', cursive;
+  font-size: 2.1rem;
+  font-weight: 100;
+}
+
+.homeContainer .upperbody .content .cityAndDate .date h2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+
+.homeContainer .upperbody .content .tmpFeel {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  height: 100%;
+}
+
+.homeContainer .upperbody .content .tmpFeel .temperature h1 {
+  font-size: 5.8rem;
+}
+
+.homeContainer .upperbody .content .tmpFeel .temperature h1 span {
+  font-weight: 100;
+}
+
+.homeContainer .upperbody .content .tmpFeel .feeling h4 {
+  text-transform: uppercase;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 100;
+}
+
+.homeContainer .lowerbody {
+  width: inherit;
+  height: 50vh;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.homeContainer .lowerbody .moreDetails {
+  height: 50%;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.homeContainer .lowerbody .moreDetails .sunrise, .homeContainer .lowerbody .moreDetails .sunset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+}
+
+.homeContainer .lowerbody .moreDetails .sunrise p, .homeContainer .lowerbody .moreDetails .sunset p {
+  height: 20%;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.homeContainer .lowerbody .moreDetails .sunrise .timeandicon svg, .homeContainer .lowerbody .moreDetails .sunset .timeandicon svg {
+  font-size: 2.4rem;
+}
+
+.homeContainer .lowerbody .moreDetails .sunset p {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.homeContainer .lowerbody .moreDetails .wind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homeContainer .lowerbody .moreDetails .wind .timeandiconn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.homeContainer .lowerbody .moreDetails .wind .timeandiconn p {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.homeContainer .lowerbody .moreDetails .wind .timeandiconn svg {
+  font-size: 2.4rem;
+}
+
+.homeContainer .lowerbody .moreInfo {
+  height: 50%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeContainer .lowerbody .moreInfo .feelsLike {
+  width: 40%;
+}
+
+.homeContainer .lowerbody .moreInfo .feelsLike h4 {
+  font-size: 1.6rem;
+  font-family: 'Yomogi', cursive;
+}
+
+.homeContainer .lowerbody .moreInfo .SearchCity {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homeContainer .lowerbody .moreInfo .SearchCity .searchInput {
+  width: 60%;
+  height: 35px;
+  border: 1px solid white;
+  outline: none;
+  background: none;
+  border-radius: 16px;
+  color: white;
+  font-size: 1.4rem;
+  padding-left: 12px;
+  font-family: 'Yomogi', cursive;
+}
+
+.homeContainer .lowerbody .moreInfo .SearchCity .searchInput::-webkit-input-placeholder {
+  color: white;
+}
+
+.homeContainer .lowerbody .moreInfo .SearchCity .searchInput:-ms-input-placeholder {
+  color: white;
+}
+
+.homeContainer .lowerbody .moreInfo .SearchCity .searchInput::-ms-input-placeholder {
+  color: white;
+}
+
+.homeContainer .lowerbody .moreInfo .SearchCity .searchInput::placeholder {
+  color: white;
+}
+
+.homeContainer .lowerbody .moreInfo .SearchCity :-ms-input-placeholder {
+  color: white;
+}
+
+.homeContainer .lowerbody .moreInfo .SearchCity .searchBtn {
+  font-size: 2.2rem;
+  margin-left: 8px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Home.css.map */
