@@ -9,7 +9,7 @@ export default function UseFetch(cityName) {
     setLoading(true)
     setError(false)
     const source = axios.CancelToken.source()
-    let authToken = 'c810b7397dd6b619c07c6643f85398a7'
+    let authToken = 'mytoken'
     const fetchData =async ()=>{
         try{
             const res=await axios({
